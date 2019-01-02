@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>端到端网络切片管理平台</title>
+    <link href="../styles/common.css" rel="stylesheet">
+    <script src="../scripts/Plugin/jquery-3.3.1.min.js"></script>
+    <script src="../scripts/Plugin/echarts.min.js"></script>
+    <script src="../scripts/Plugin/bmap.min.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=LelFSt6BfykGf8m3PB5zr8LaXAG2cMg6"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/quota.js"></script>
+    <script src="../scripts/echarts.common.min.js"></script>
+    <script src="../scripts/echarts.js"></script>
+</head>
+<body>
+<!--顶部-->
+<header class="header left">
+  <div class="left nav">
+      <ul>
+          <li><i class="nav_1"></i><a href="index.html">平台概况</a> </li>
+          <li class="nav_active"><i class="nav_2"></i><a href="chronic.html">切片详情</a> </li>
+          <li><i class="nav_3"></i><a href="trend.html">切片创建</a> </li>
+          <li><i class="nav_4"></i><a href="trend.html">故障监析</a> </li>
+          </ul>
+  </div>
+    <div class="header_center left" style="position:relative">
+        
+        <h2><strong>端到端网络切片管理平台</strong></h2>
+
+    </div>
+    <div class="right nav text_right">
+        <ul>
+
+        </ul>
+    </div>
+
+</header>
+<!--内容部分-->
+<div class="con left">
+  <!--数据总概-->
+  <div class="con_div">
+      <div class="con_div_text left">
+          <div class="con_div_text01 left">
+              <img src="../images/info_7.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>用户设备ID</p>
+                  <p class="z1"></p>
+              </div>
+          </div>
+          <div class="con_div_text01 right">
+              <img src="../images/info_8.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>用户设备IMSI</p>
+                  <p class="imsi"></p>
+              </div>
+          </div>
+      </div>
+      <div class="con_div_text left">
+          <div class="con_div_text01 left">
+              <img src="../images/info_9.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>用户设备IP</p>
+                  <p class="sky ip"></p>
+              </div>
+          </div>
+          <div class="con_div_text01 right">
+              <img src="../images/info_10.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>当前时延（ms）</p>
+                  <p class="sky ms"></p>
+              </div>
+          </div>
+      </div>
+      <div class="con_div_text left">
+
+          <div class="con_div_text01 left">
+              <img src="../images/info_11.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>当前上行带宽（Mbits/sec）</p>
+                  <p class="org orgu"></p>
+              </div>
+          </div>
+          <div class="con_div_text01 right">
+              <img src="../images/info_12.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>当前下行带宽（Mbits/sec）</p>
+                  <p class="org orgd"></p>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+   <div class="con_div">
+      <div class="con_div_text left">
+          <div class="con_div_text01 left">
+              <img src="../images/info_7.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>核心网cpu</p>
+                  <p class="epcc"></p>
+              </div>
+          </div>
+          <div class="con_div_text01 right">
+              <img src="../images/info_8.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>核心网内存使用</p>
+                  <p class="epcmu"></p>
+              </div>
+          </div>
+      </div>
+      <div class="con_div_text left">
+          <div class="con_div_text01 left">
+              <img src="../images/info_9.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>核心网总内存</p>
+                  <p class="sky epcmt"></p>
+              </div>
+          </div>
+          <div class="con_div_text01 right">
+              <img src="../images/info_10.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>核心网内存使用率</p>
+                  <p class="sky epcmp"></p>
+              </div>
+          </div>
+      </div>
+      <div class="con_div_text left">
+
+          <div class="con_div_text01 left">
+              <img src="../images/info_11.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>核心网NetIO</p>
+                  <p class="org epcn"></p>
+              </div>
+          </div>
+          <div class="con_div_text01 right">
+              <img src="../images/info_12.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>核心网BlockIO</p>
+                  <p class="org epcb"></p>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  
+     <div class="con_div">
+      <div class="con_div_text left">
+          <div class="con_div_text01 left">
+              <img src="../images/info_7.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>用户设备ID</p>
+                  <p class='z1'></p>
+              </div>
+          </div>
+          <div class="con_div_text01 right">
+              <img src="../images/info_8.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>用户设备IMSI</p>
+                  <p class="imsi"></p>
+              </div>
+          </div>
+      </div>
+      <div class="con_div_text left">
+          <div class="con_div_text01 left">
+              <img src="../images/info_9.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>用户设备IP</p>
+                  <p class="sky ip"></p>
+              </div>
+          </div>
+          <div class="con_div_text01 right">
+              <img src="../images/info_10.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>当前时延（ms）</p>
+                  <p class="sky ms"></p>
+              </div>
+          </div>
+      </div>
+      <div class="con_div_text left">
+
+          <div class="con_div_text01 left">
+              <img src="../images/info_11.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>当前上行带宽（Mbits/sec）</p>
+                  <p class="org orgu"></p>
+              </div>
+          </div>
+          <div class="con_div_text01 right">
+              <img src="../images/info_12.png" class="left text01_img"/>
+              <div class="left text01_div">
+                  <p>当前下行带宽（Mbits/sec）</p>
+                  <p class="org orgd"></p>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  
+    <!--统计分析图-->
+    <div class="div_any00">
+	    <div class="left div_any11">
+			<div class="div_any_child00">
+                <div class="div_any_title"><img src="../images/title_5.png">时延（ms）</div>
+                <div id="lineChart1" style="width: 100%;"  class="p_chart1"></div>
+            </div>
+		</div>
+		<div class="left div_any11">
+            <div class="div_any_child00">
+                <div class="div_any_title"><img src="../images/title_7.png">上行带宽（Mbits/sec）</div>
+                <div id="lineChart2" style="width: 100%;" class="p_chart1">
+                </div>
+            </div>
+        </div>
+       	<div class="left div_any11">
+            <div class="div_any_child00">
+                <div class="div_any_title"><img src="../images/title_9.png">下行带宽（Mbits/sec）</div>
+                <div id="lineChart3" style="width: 100%;" class="p_chart1"></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
